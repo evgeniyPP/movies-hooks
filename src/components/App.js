@@ -1,4 +1,4 @@
-import React, { useReducer, useEffect } from "react";
+import React, { useReducer } from "react";
 import Header from "./Header";
 import Movies from "./Movies/Movies";
 import {
