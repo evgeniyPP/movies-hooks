@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../main.css";
+import TextField from "@material-ui/core/TextField";
+import Button from "@material-ui/core/Button";
 
 const Search = ({ onSearch }) => {
   const [request, setRequest] = useState("");
@@ -9,14 +11,29 @@ const Search = ({ onSearch }) => {
   };
 
   const handleSubmit = () => {
+    if (!request) return;
     onSearch(request);
     setRequest("");
   };
 
   return (
-    <div>
-      <input type="text" onChange={handleInput} value={request} />
-      <button onClick={handleSubmit}>Поиск</button>
+    <div className="search">
+      <TextField
+        type="text"
+        placeholder="Введите фильм на английском"
+        margin="normal"
+        onChange={handleInput}
+        value={request}
+        className="search-input"
+      />
+      <Button
+        onClick={handleSubmit}
+        variant="contained"
+        color="primary"
+        className="searchBtn"
+      >
+        Поиск
+      </Button>
     </div>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import Movie from "./Movie";
+import NoSearch from "./noSearch";
 import "../../main.css";
 import Preloader from "../Preloader";
 
@@ -14,7 +15,7 @@ const Movies = ({ movies, loading }) => {
 
   return (
     <div className="movies">
-      {movies.length ? renderMovies() : <p>Введите запрос</p>}
+      {movies.length ? renderMovies() : <NoSearch />}
     </div>
   );
 };

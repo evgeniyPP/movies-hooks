@@ -1,6 +1,5 @@
 import React, { useReducer, useEffect } from "react";
 import Header from "./Header";
-
 import Movies from "./Movies/Movies";
 import {
   reducer,
@@ -15,10 +14,6 @@ const IMDB_API_URL = "https://www.omdbapi.com/?apikey=4a61c6f&s=";
 const App = () => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const { movies, loading } = state;
-
-  useEffect(() => {
-    onSearch("iron man");
-  }, []);
 
   const onSearch = request => {
     dispatch(setLoading());
