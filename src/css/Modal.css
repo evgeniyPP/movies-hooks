@@ -26,6 +26,29 @@
   padding-right: 2em;
 }
 
+.movieData__title__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.movieData__title {
+  max-width: 70%;
+}
+
+.movieData__rating {
+  font-size: 1.25rem;
+  padding: 1em 0;
+  font-weight: bold;
+  margin-left: 2em;
+  display: flex;
+  align-items: center;
+}
+
+.movieData__rating img {
+  width: 30px;
+  margin-right: 0.5em;
+}
+
 .movieData__item {
   margin-bottom: 1em !important;
 }
@@ -35,6 +58,10 @@
 }
 
 @media (max-width: 1023px) {
+  .movieData__title__wrapper {
+    flex-direction: column;
+  }
+
   .modalContent {
     padding: 2em;
     padding-bottom: 0;
@@ -48,6 +75,7 @@
   .movieData__title {
     text-align: center;
     font-size: 1.75em !important;
+    max-width: 100%;
   }
 
   .movieData__poster {

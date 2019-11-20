@@ -1,7 +1,8 @@
 import React from "react";
 import { Modal, Paper, Typography } from "@material-ui/core";
 import noPoster from "../assets/images/no-poster.jpg";
-import '../css/Modal.css'
+import star from "../assets/images/star.png";
+import "../css/Modal.css";
 
 export default ({ isOpen, dispatchSetClose, movieData }) => {
   const renderData = () => {
@@ -14,7 +15,10 @@ export default ({ isOpen, dispatchSetClose, movieData }) => {
       "Type",
       "DVD",
       "BoxOffice",
-      "Response"
+      "Response",
+      "imdbRating",
+      "imdbVotes",
+      "totalSeasons"
     ];
     for (let data in movieData) {
       if (!banned.includes(data) && movieData[data] !== "N/A") {
@@ -37,14 +41,24 @@ export default ({ isOpen, dispatchSetClose, movieData }) => {
   return (
     <Modal className="modalParent" open={isOpen} onClose={dispatchSetClose}>
       <Paper className="modalContent" component="div" elevation={10}>
-        <Typography
-          className="movieData__title"
-          variant="h4"
-          component="h2"
-          id="modal-title"
-        >
-          {movieData ? movieData.Title : "No title"}
-        </Typography>
+        <div className="movieData__title__wrapper">
+          <Typography
+            className="movieData__title"
+            variant="h4"
+            component="h2"
+            id="modal-title"
+          >
+            {movieData ? movieData.Title : "No title"}
+          </Typography>
+          <div className="movieData__rating">
+            <img src={star} alt="" />
+            <span>
+              {movieData
+                ? `${movieData.imdbRating} (${movieData.imdbVotes})`
+                : "N/A"}
+            </span>
+          </div>
+        </div>
         <div className="modalContent__right">
           {movieData.Poster === "N/A" ? (
             <img className="movieData__poster" src={noPoster} alt="" />
