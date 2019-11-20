@@ -44,6 +44,7 @@ body {
 .movie {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
   max-width: 300px;
@@ -52,11 +53,17 @@ body {
 }
 
 .movie h5 {
-  height: 2.75em;
+  cursor: pointer;
+  display: block;
 }
 
 .movie p {
   margin-bottom: 1.5em;
+  display: block;
+}
+
+.movie img {
+  cursor: pointer;
 }
 
 .noSearch {
@@ -75,6 +82,7 @@ body {
   display: block;
   max-width: 100%;
   padding: 1em;
+  object-fit: cover;
 }
 
 @media (max-width: 424px) {
@@ -84,5 +92,12 @@ body {
 
   .search {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 374px) {
+  .movieCardContent {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
   }
 }

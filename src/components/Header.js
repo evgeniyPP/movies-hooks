@@ -1,6 +1,5 @@
 import React from "react";
 import Search from "./Search";
-import "../main.css";
 import { Paper } from "@material-ui/core";
 
 const Header = ({ onSearch }) => {

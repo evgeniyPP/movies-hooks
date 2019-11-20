@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useCallback } from "react";
-import "../main.css";
 import { TextField, Button } from "@material-ui/core";
 
 const Search = ({ onSearch }) => {

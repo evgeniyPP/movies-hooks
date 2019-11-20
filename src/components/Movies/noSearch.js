@@ -1,7 +1,6 @@
 import React from "react";
-import Typography from "@material-ui/core/Typography";
-import { Paper } from "@material-ui/core";
-import image from "../../assets/gosling.png";
+import { Paper, Typography } from "@material-ui/core";
+import image from "../../assets/images/gosling.png";
 
 const NoSearch = () => {
   return (
