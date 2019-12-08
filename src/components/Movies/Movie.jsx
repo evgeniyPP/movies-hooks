@@ -1,6 +1,6 @@
-import React from "react";
-import noPoster from "../../assets/images/no-poster.jpg";
-import { Card, CardContent, CardMedia, Typography } from "@material-ui/core";
+import React from 'react';
+import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
+import noPoster from '../../assets/images/no-poster.jpg';
 
 const Movie = ({ movie, dispatchSetOpen }) => {
   const openMovie = () => {
@@ -17,12 +17,12 @@ const Movie = ({ movie, dispatchSetOpen }) => {
           gutterBottom
           onClick={openMovie}
         >
-          {movie.Title ? movie.Title : "Нет названия"}
+          {movie.Title ? movie.Title : 'Нет названия'}
         </Typography>
-        <Typography className='movieYear' variant="body1" component="p" gutterBottom>
-          {movie.Year ? movie.Year : ""}
+        <Typography className="movieYear" variant="body1" component="p" gutterBottom>
+          {movie.Year ? movie.Year : ''}
         </Typography>
-        {movie.Poster === "N/A" ? (
+        {movie.Poster === 'N/A' ? (
           <CardMedia
             component="img"
             image={noPoster}

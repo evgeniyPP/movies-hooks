@@ -1,6 +1,6 @@
-import React from "react";
-import Search from "./Search";
-import { Paper } from "@material-ui/core";
+import React from 'react';
+import { Paper } from '@material-ui/core';
+import Search from './Search';
 
 const Header = ({ onSearch }) => {
   return (

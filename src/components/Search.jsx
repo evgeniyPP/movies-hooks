@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useCallback } from "react";
-import { TextField, Button } from "@material-ui/core";
+import React, { useState, useEffect, useCallback } from 'react';
+import { TextField, Button } from '@material-ui/core';
 
 const Search = ({ onSearch }) => {
-  const [request, setRequest] = useState("");
+  const [request, setRequest] = useState('');
 
   const handleInput = e => {
     setRequest(e.target.value);
@@ -11,7 +11,7 @@ const Search = ({ onSearch }) => {
   const handleSubmit = useCallback(() => {
     if (!request) return;
     onSearch(request);
-    setRequest("");
+    setRequest('');
   }, [onSearch, request]);
 
   const handleKeyPress = useCallback(
@@ -24,9 +24,9 @@ const Search = ({ onSearch }) => {
   );
 
   useEffect(() => {
-    window.addEventListener("keydown", handleKeyPress);
+    window.addEventListener('keydown', handleKeyPress);
     return () => {
-      window.removeEventListener("keydown", handleKeyPress);
+      window.removeEventListener('keydown', handleKeyPress);
     };
   }, [handleKeyPress]);
 
@@ -41,12 +41,7 @@ const Search = ({ onSearch }) => {
         autoFocus
         className="search-input"
       />
-      <Button
-        onClick={handleSubmit}
-        variant="contained"
-        color="primary"
-        className="searchBtn"
-      >
+      <Button onClick={handleSubmit} variant="contained" color="primary" className="searchBtn">
         Поиск
       </Button>
     </div>
