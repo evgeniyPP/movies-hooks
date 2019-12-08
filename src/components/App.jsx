@@ -23,6 +23,7 @@ const App = () => {
 
   const onSearch = async request => {
     dispatch(clearError());
+    dispatch(setMovies([]));
     try {
       dispatch(setLoading());
       const query = request.split(' ').join('+');
