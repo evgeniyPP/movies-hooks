@@ -84,6 +84,14 @@ body {
   object-fit: cover;
 }
 
+.error {
+  border: 1px solid #a94d00;
+  padding: 0.75rem 1.25rem;
+  color: #a94d00;
+  background: #f8d7da;
+  border-radius: 0.25rem;
+}
+
 @media (max-width: 424px) {
   .header {
     font-size: 1.25em;
@@ -91,6 +99,9 @@ body {
 
   .search {
     flex-direction: column;
+  }
+  .noSearch__title {
+    font-size: 1.25em !important;
   }
 }
 

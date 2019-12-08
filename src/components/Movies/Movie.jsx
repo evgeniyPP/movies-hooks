@@ -2,9 +2,9 @@ import React from 'react';
 import { Card, CardContent, CardMedia, Typography } from '@material-ui/core';
 import noPoster from '../../assets/images/no-poster.jpg';
 
-const Movie = ({ movie, dispatchSetOpen }) => {
+const Movie = ({ movie, openModal }) => {
   const openMovie = () => {
-    dispatchSetOpen(movie.imdbID);
+    openModal(movie.imdbID);
   };
 
   return (

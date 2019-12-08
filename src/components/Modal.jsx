@@ -4,7 +4,7 @@ import noPoster from '../assets/images/no-poster.jpg';
 import star from '../assets/images/star.png';
 import '../css/Modal.css';
 
-export default ({ isOpen, dispatchSetClose, movieData }) => {
+export default ({ isModal, closeModal, movieData }) => {
   const renderData = () => {
     const banned = [
       'Title',
@@ -40,7 +40,7 @@ export default ({ isOpen, dispatchSetClose, movieData }) => {
   };
 
   return (
-    <Modal className="modalParent" open={isOpen} onClose={dispatchSetClose}>
+    <Modal className="modalParent" open={isModal} onClose={closeModal}>
       <Paper className="modalContent" component="div" elevation={10}>
         <div className="movieData__title__wrapper">
           <Typography className="movieData__title" variant="h4" component="h2" id="modal-title">

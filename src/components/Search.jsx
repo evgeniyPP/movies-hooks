@@ -8,9 +8,9 @@ const Search = ({ onSearch }) => {
     setRequest(e.target.value);
   };
 
-  const handleSubmit = useCallback(() => {
+  const handleSubmit = useCallback(async () => {
     if (!request) return;
-    onSearch(request);
+    await onSearch(request);
     setRequest('');
   }, [onSearch, request]);
 
